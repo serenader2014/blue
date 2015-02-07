@@ -1,0 +1,35 @@
+extends layout
+
+block title
+    title #{setting.name} - 首页
+
+block content
+    .wrapper
+        .side-content
+            .blog-about
+                h1.blog-name
+                    a(href='/') #{setting.name}
+                h3.blog-desc #{setting.desc}
+            .blog-nav
+                ul
+                    li: a(href='#{url.post}') 文章
+                    li: a(href='#{url.gallery}') 相册
+        .main-content
+            - each post in posts
+                .post
+                    h2.post-title: a(href='#{url.post}/#{post.slug}') #{post.title}
+                    .post-info
+                        a.post-author(href='#{url.user}/#{post.author}')
+                            span.author-avatar(style='background-image: url(#{url.api}#{url.avatar}/#{post.author})')
+                            span.author-name #{post.author}
+                        span.post-date #{post.createDate}
+                        span.post-category
+                            | 收集在
+                            a(href='#{url.category}/#{post.category}') #{post.categoryName}
+
+                    p.post-excerpt
+                        |!{post.excerpt} ...
+                        a(href='#{url.post}/#{post.slug}') 阅读原文
+                    .post-tags
+                        - each tag in post.tags
+                            a(href='#{url.post}?tag=#{tag}') ##{tag}

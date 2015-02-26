@@ -9,11 +9,23 @@ html(lang='zh-cmn-Hans')
         meta(name='robots', content='index,follow')/
         meta(name='viewport', content='width=device-width,initial-scale=1.0,user-scalable=no',)/
         link(rel='stylesheet', href='#{assets.client}/css/style.css')/
-        link(rel='stylesheet', href='//google-fonts.damn.so/css?family=Niconne|Open+Sans:300,800,400')/
+        //- link(rel='stylesheet', href='//google-fonts.damn.so/css?family=Niconne|Open+Sans:300,800,400')/
+        link(rel='stylesheet', href='#{assets.client}/css/rainbow.css')/
         block css
 
     body
-        block content
+        .wrapper
+            .side-content
+                .blog-about
+                    h1.blog-name
+                        a(href='/') #{setting.name}
+                    h3.blog-desc #{setting.desc}
+                .blog-nav
+                    ul
+                        li: a(href='#{url.post}') 文章
+                        li: a(href='#{url.gallery}') 相册
+            .main-content
+                block content
         - var urlString = JSON.stringify(url);
         - var assetsString = JSON.stringify(assets);
         script.
@@ -21,5 +33,4 @@ html(lang='zh-cmn-Hans')
             var assets = JSON.parse('!{assetsString}');
         script(type='text/javascript', src='#{assets.client}/js/jquery.min.js')
         script(type='text/javascript', src='#{assets.client}/js/moment.min.js')
-        script(type='text/javascript', src='#{assets.client}/js/script.js')
         block script

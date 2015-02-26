@@ -49,11 +49,13 @@ table {
 
 html {
     font-size: 10px;
+    height: 100%;
     font-family: "Open Sans", "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 body {
     height: 100%;
+    background: #F5F5F5;
 }
 
 a {
@@ -69,10 +71,6 @@ a:hover {
 
 * {
     box-sizing: border-box;
-}
-
-.wrapper {
-    background: #F5F5F5;
 }
 
 .side-content {
@@ -119,6 +117,11 @@ a:hover {
     background: #FFFFFF;
 }
 
+.blog-nav a:hover {
+    color: #FFFFFF;
+    background: #3BAAFF;
+}
+
 .post {
     width: 68rem;
     margin: 1rem auto 3rem;
@@ -128,8 +131,8 @@ a:hover {
 }
 
 .post-title a {
-    font-size: 2.4rem;
-    line-height: 1.5;
+    font-size: 3.4rem;
+    line-height: 1.7;
     margin-bottom: 2rem;
 }
 
@@ -178,4 +181,134 @@ a:hover {
     font-size: 1.4rem;
     border-radius: 0.3rem;
     background: #8BCCFF;
+}
+
+.pagination {
+    text-align: center;
+    padding: 10px;
+}
+
+.pagination a, .pagination span {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.pagination span {
+    color: #888888;
+}
+
+.post-content {
+    font-size: 1.4rem;
+    color: #444444;
+    line-height: 1.7;
+}
+
+code {
+    display: inline-block;
+    padding: 0 0.3rem;
+    background: #EEEEEE;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+.post-content pre {
+    margin: 1rem 0;
+}
+
+.post-content blockquote {
+    padding-left: 1rem;
+    font-style: italic;
+    border-left: 0.5rem solid #ECECEC;
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    margin-bottom: 0.5rem;
+}
+
+.post-content hr {
+    margin: 5rem 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    padding: 0;
+}
+
+.post-content h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+}
+
+.post-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.post-content h3 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-content h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+}
+
+.post-content ul {
+    list-style-type: disc;
+}
+
+.post-content ul, .post-content ol {
+    margin: 1rem 0 2rem 2rem;
+}
+
+.post-content ol {
+    list-style-type: decimal;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.post-content table {
+    width: 100%;
+    margin: 2rem 0;
+    border: 1px solid #EEEEEE;
+}
+
+.post-content th {
+    font-weight: 800;
+    background: #EEEEEE;
+}
+
+.post-content td, .post-content th {
+    padding: 0.5rem 1rem;
+}
+
+.post-content tr:nth-child(odd) {
+    background: #FCFCFC;
+}
+
+.post-content a {
+    color: #777777;
+    border-bottom: 1px solid #CECECE;
+}
+
+.post-content a:hover {
+    color: #555555;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.post-content img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 58rem;
 }

@@ -1,0 +1,27 @@
+extends layout
+
+block title
+    title #{post.title}
+
+block content
+    .post
+        h2.post-title: a(href='#{url.post}/#{post.slug}') #{post.title}
+        .post-info
+            a.post-author(href='#{url.user}/#{post.author}')
+                span.author-avatar(style='background-image: url(#{url.api}#{url.avatar}/#{post.author})')
+                span.author-name #{post.author}
+            span.post-date #{post.createDate}
+            span.post-category
+                | 收集在
+                a(href='#{url.category}/#{post.category}') #{post.categoryName}
+
+        .post-content
+            |!{post.html}
+        .post-tags
+            - each tag in post.tags
+                a(href='#{url.post}?tag=#{tag}') ##{tag}
+block script
+    script(type='text/javascript', src='#{assets.client}/js/highlight.pack.js')
+    script(type='text/javascript', src='#{assets.client}/js/script.js')
+    script.
+        hljs.initHighlightingOnLoad();

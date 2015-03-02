@@ -312,3 +312,65 @@ code {
     margin: 1rem auto;
     max-width: 58rem;
 }
+
+.other-post {
+    width: 68rem;
+    margin: 0 auto;
+}
+
+.other-post:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.other-post > div {
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    width: 32rem;
+    background: #FFFFFF;
+}
+
+.other-post .desc {
+    font-size: 1.4rem;
+    color: #AAAAAA;
+    margin-bottom: 1rem;
+}
+
+.next-post {
+    float: right;
+}
+
+.previous-post {
+    float: left;
+}
+
+.other-post .title a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 2rem;
+    color: #777777;
+}
+
+.other-post img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+.other-post .author {
+    margin-top: 1rem;
+}
+
+.other-post .post-date {
+    border: none;
+    margin-right: 0;
+    margin-left: 1rem;
+    padding-right: 0;
+}

@@ -20,6 +20,24 @@ block content
         .post-tags
             - each tag in post.tags
                 a(href='#{url.post}?tag=#{tag}') ##{tag}
+
+    .other-post
+        .previous-post
+            .desc 上一篇文章
+            .title: a(title='#{previous.title}', href='#{url.post}/#{previous.slug}') #{previous.title}
+            .author
+                a(href='#{url.user}/#{previous.author}')
+                    img(src='#{url.api}/#{url.avatar}/#{previous.author}')
+                    | #{previous.author}
+                span.post-date #{previous.createDate}
+        .next-post
+            .desc 下一篇文章
+            .title: a(title='#{previous.title}', href='#{url.post}/#{next.slug}') #{next.title}
+            .author
+                a(href='#{url.user}/#{next.author}')
+                    img(src='#{url.api}/#{url.avatar}/#{next.author}')
+                    | #{next.author}
+                span.post-date #{next.createDate}
 block script
     script(type='text/javascript', src='#{assets.client}/js/highlight.pack.js')
     script(type='text/javascript', src='#{assets.client}/js/script.js')

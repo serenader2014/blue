@@ -38,6 +38,7 @@ block content
         .pagination
             - for (; i <= total; i++)
                 a(href='/page/#{i}') #{i}
-            a(href='/page/2') 下一页
+            - if (total > 1)
+                a(href='/page/2') 下一页
 block script
     script(type='text/javascript', src='#{assets.client}/js/script.js')

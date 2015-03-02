@@ -34,7 +34,7 @@ block content
         - if (next)
             .next-post
                 .desc 下一篇文章
-                .title: a(title='#{previous.title}', href='#{url.post}/#{next.slug}') #{next.title}
+                .title: a(title='#{next.title}', href='#{url.post}/#{next.slug}') #{next.title}
                 .author
                     a(href='#{url.user}/#{next.author}')
                         img(src='#{url.api}/#{url.avatar}/#{next.author}')

@@ -374,3 +374,81 @@ code {
     margin-left: 1rem;
     padding-right: 0;
 }
+
+.main-wrapper {
+    width: 82rem;
+    margin: 0 auto;
+    padding: 3rem;
+    position: relative;
+    background: #FFFFFF;
+}
+
+.category-list {
+    position: absolute;
+    width: 23rem;
+    padding: 0 2rem;
+}
+
+.category-list p {
+    font-size: 2.3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #EEEEEE;
+    color: #777777;
+}
+
+.category-list a {
+    display: block;
+    padding: 1rem 0;
+}
+
+.post-list {
+    margin-left: 23rem;
+    padding: 0 2rem;
+    border-left: 1px solid #EEEEEE;
+}
+
+.post-list li:first-child {
+    border-top: 1px solid #EEEEEE;
+}
+
+.post-list li {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.post-list h2 a{
+    margin: 0.5rem 0;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.post-list .user img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.post-list .post-date {
+    border: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.post-list .post-cate {
+    color: #777777;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #EEEEEE;
+}
+
+.query-title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #555555;
+}

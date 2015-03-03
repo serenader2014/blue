@@ -1,7 +1,10 @@
 extends layout
 
 block title
-    title #{setting.name} - 首页
+    - if (page)
+        title #{setting.name} - 第 #{page} 页
+    - else
+        title #{setting.name} - 首页
 
 block content
     - each post in posts
@@ -14,7 +17,7 @@ block content
                 span.post-date #{post.createDate}
                 span.post-category
                     | 收集在
-                    a(href='#{url.category}/#{post.category}') #{post.categoryName}
+                    a(href='#{url.post}?category=#{post.category}') #{post.categoryName}
 
             p.post-excerpt
                 |!{post.excerpt} ...
@@ -27,18 +30,18 @@ block content
         .pagination
             - if (page > 1)
                 a(href='/page/#{page-1}') 上一页
-            - for (; i <= total; i++)
+            - for (; i <= pageNum; i++)
                 - if (page==i)
                     span #{i}
                 - else
                     a(href='/page/#{i}') #{i}
-            - if (page < total)
+            - if (page < pageNum)
                 a(href='/page/#{page+1}') 下一页
     - else
         .pagination
-            - for (; i <= total; i++)
+            - for (; i <= pageNum; i++)
                 a(href='/page/#{i}') #{i}
-            - if (total > 1)
+            - if (pageNum > 1)
                 a(href='/page/2') 下一页
 block script
     script(type='text/javascript', src='#{assets.client}/js/script.js')

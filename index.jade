@@ -17,7 +17,7 @@ block content
                 span.post-date #{post.createDate}
                 span.post-category
                     | 收集在
-                    a(href='#{url.post}?category=#{post.category}') #{post.categoryName}
+                    a(href='#{url.post}?category=#{post.categoryName}') #{post.categoryName}
 
             p.post-excerpt
                 |!{post.excerpt} ...
